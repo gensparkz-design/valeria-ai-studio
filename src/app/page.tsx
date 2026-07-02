@@ -1,4 +1,4 @@
-"use client";
+  "use client";
 
 import { useState } from "react";
 import {
@@ -48,6 +48,9 @@ const data = {
     consoleLabel: "AI Agent Console",
     consoleTitle: "Valeria AI Assistant",
     online: "Online",
+    telegramCardTitle: "Prefer Telegram?",
+    telegramCardText:
+      "You can message me directly and receive a faster response.",
     nav: {
       solutions: "Solutions",
       why: "Why Me",
@@ -72,16 +75,14 @@ const data = {
     footerTagline: "AI Products • MVP • Automation • AI Agents",
   },
   ru: {
-    contactTitle: "Давайте создадим ваше AI-решение",
-contactText:
-  "Расскажите о проекте, и я помогу определить самый быстрый и полезный вариант решения.",
-telegram: "Написать в Telegram",
-send: "Отправить заявку",
-discuss: "Обсудить проект",
+    book: "Записаться на звонок",
+    badge: "AI-продукт • AI-агенты • MVP • Автоматизация",
+    heroTitle: "Студия AI-продуктов и автоматизации",
     heroText:
       "Помогаю бизнесу превращать идеи в AI-продукты, запускать MVP, автоматизировать процессы, создавать контент и быстрее выводить цифровые решения на рынок.",
     primary: "Обсудить проект",
     secondary: "Посмотреть решения",
+    telegram: "Написать в Telegram",
     solutionsTitle: "Решения",
     solutionsText:
       "AI-решения для бизнеса: от продуктовой стратегии до рабочих инструментов и автоматизации.",
@@ -93,10 +94,18 @@ discuss: "Обсудить проект",
     aboutText:
       "Меня зовут Валерия. Я AI Product Manager и AI Solutions Builder. Я соединяю продуктовое мышление, опыт управления проектами и современные AI-инструменты, чтобы помогать бизнесу проверять идеи, запускать MVP и автоматизировать процессы.",
     pricingTitle: "Стоимость",
+    contactTitle: "Давайте создадим ваше AI-решение",
+    contactText:
+      "Расскажите о проекте, и я помогу определить самый быстрый и полезный вариант решения.",
+    send: "Отправить заявку",
+    discuss: "Обсудить проект",
     logoTagline: "AI-продуктовая студия",
     consoleLabel: "AI Agent Console",
     consoleTitle: "Valeria AI Assistant",
     online: "Онлайн",
+    telegramCardTitle: "Предпочитаете Telegram?",
+    telegramCardText:
+      "Вы можете написать мне напрямую и получить более быстрый ответ.",
     nav: {
       solutions: "Решения",
       why: "Почему я",
@@ -121,6 +130,7 @@ discuss: "Обсудить проект",
     footerTagline: "AI-продукты • MVP • Автоматизация • AI-агенты",
   },
 };
+
 const solutions = {
   en: [
     {
@@ -424,6 +434,7 @@ const pricing = {
     { title: "Custom AI Product", price: "$3,000+", items: ["Разработка MVP под ключ", "Продуктовая стратегия", "Индивидуальные интеграции"] },
   ],
 };
+
 export default function Page() {
   const [lang, setLang] = useState<Lang>("en");
   const [openSolution, setOpenSolution] = useState<number | null>(null);
@@ -472,6 +483,7 @@ export default function Page() {
         <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(56,189,248,0.15),transparent_60%),radial-gradient(40%_40%_at_80%_20%,rgba(168,85,247,0.12),transparent_60%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(70%_60%_at_50%_0%,black,transparent)]" />
       </div>
+
       <header className="fixed inset-x-0 top-0 z-50 h-[96px] border-b border-white/10 bg-[#05060a]/60 backdrop-blur-2xl">
         <div className="pointer-events-none absolute inset-x-0 -bottom-px h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent" />
 
@@ -586,6 +598,7 @@ export default function Page() {
       </header>
 
       <div className="h-[96px]" aria-hidden="true" />
+
       <section id="top" className="mx-auto max-w-7xl px-6 pb-20 pt-16 md:pt-24">
         <div className="grid items-center gap-14 lg:grid-cols-2">
           <div>
@@ -616,16 +629,16 @@ export default function Page() {
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3.5 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10"
               >
                 {t.secondary}
-  
               </a>
+
               <a
-  href="https://t.me/genspark"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-7 py-3.5 font-semibold text-cyan-200 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400/20 hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
->
-  Telegram
-</a>
+                href="https://t.me/genspark"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-7 py-3.5 font-semibold text-cyan-200 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400/20 hover:shadow-[0_0_25px_rgba(34,211,238,0.35)]"
+              >
+                Telegram
+              </a>
             </div>
           </div>
 
@@ -681,6 +694,7 @@ export default function Page() {
           ))}
         </div>
       </section>
+
       <section id="solutions" className="mx-auto max-w-7xl px-6 py-24">
         <h2 className="text-5xl font-bold">{t.solutionsTitle}</h2>
 
@@ -737,29 +751,27 @@ export default function Page() {
                   }
                 >
                   <div className="overflow-hidden">
-  <div className="rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 p-6">
+                    <div className="rounded-2xl border border-cyan-400/20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 p-6">
+                      <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-cyan-300">
+                        {t.casePreview}
+                      </span>
 
-    <span className="inline-flex items-center rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.18em] text-cyan-300">
-      {t.casePreview}
-    </span>
+                      <h4 className="mt-4 text-lg font-semibold text-white">
+                        {example.title}
+                      </h4>
 
-    <h4 className="mt-4 text-lg font-semibold text-white">
-      {example.title}
-    </h4>
-
-    <ul className="mt-4 space-y-3">
-      {example.bullets.map((bullet) => (
-        <li
-          key={bullet}
-          className="flex items-start gap-3 text-sm leading-6 text-white/70"
-        >
-          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400" />
-          <span>{bullet}</span>
-        </li>
-      ))}
-    </ul>
-
-  </div>
+                      <ul className="mt-4 space-y-3">
+                        {example.bullets.map((bullet) => (
+                          <li
+                            key={bullet}
+                            className="flex items-start gap-3 text-sm leading-6 text-white/70"
+                          >
+                            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-gradient-to-r from-cyan-400 to-purple-400" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -767,6 +779,7 @@ export default function Page() {
           })}
         </div>
       </section>
+
       <section id="why" className="mx-auto max-w-7xl px-6 py-24">
         <h2 className="text-5xl font-bold">{t.whyTitle}</h2>
 
@@ -837,76 +850,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="why" className="mx-auto max-w-7xl px-6 py-24">
-        <h2 className="text-5xl font-bold">{t.whyTitle}</h2>
 
-        <p className="mt-5 max-w-3xl text-lg text-white/60">
-          {t.whyText}
-        </p>
-
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {whyCards.map(([emoji, title, text]) => (
-            <div
-              key={title}
-              className="rounded-[2rem] border border-white/10 bg-white/5 p-8 transition hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-white/10"
-            >
-              <div className="text-4xl">{emoji}</div>
-
-              <h3 className="mt-5 text-2xl font-semibold">
-                {title}
-              </h3>
-
-              <p className="mt-4 leading-8 text-white/65">
-                {text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="about" className="mx-auto max-w-7xl px-6 py-24">
-        <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur">
-          <h2 className="text-5xl font-bold">{t.aboutTitle}</h2>
-
-          <p className="mt-8 max-w-5xl text-xl leading-10 text-white/75">
-            {t.aboutText}
-          </p>
-        </div>
-      </section>
-
-      <section id="pricing" className="mx-auto max-w-7xl px-6 py-24">
-        <h2 className="text-5xl font-bold">{t.pricingTitle}</h2>
-
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {priceCards.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-[2rem] border border-white/10 bg-white/5 p-8 transition hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-white/10"
-            >
-              <h3 className="text-2xl font-semibold">
-                {item.title}
-              </h3>
-
-              <div className="mt-5 text-5xl font-bold text-cyan-300">
-                {item.price}
-              </div>
-
-              <ul className="mt-7 space-y-3 text-white/65">
-                {item.items.map((feature) => (
-                  <li key={feature}>✓ {feature}</li>
-                ))}
-              </ul>
-
-              <a
-                href="#contact"
-                className="mt-10 inline-flex rounded-full bg-cyan-400 px-7 py-3 font-semibold text-black transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 hover:shadow-[0_8px_30px_rgba(34,211,238,0.35)]"
-              >
-                {t.discuss}
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
       <section id="contact" className="mx-auto max-w-7xl px-6 py-24">
         <h2 className="text-5xl font-bold">{t.contactTitle}</h2>
 
@@ -937,26 +881,25 @@ export default function Page() {
             <ArrowRight size={18} />
           </button>
         </form>
+
         <div className="mt-10 rounded-[2rem] border border-cyan-400/20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 p-8 backdrop-blur-xl">
+          <h3 className="text-2xl font-semibold">
+            {t.telegramCardTitle}
+          </h3>
 
-  <h3 className="text-2xl font-semibold">
-    Prefer Telegram?
-  </h3>
+          <p className="mt-3 text-white/65">
+            {t.telegramCardText}
+          </p>
 
-  <p className="mt-3 text-white/65">
-    You can message me directly and receive a faster response.
-  </p>
-
-  <a
-    href="https://t.me/genspark"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="mt-6 inline-flex items-center rounded-full bg-cyan-400 px-8 py-3 font-semibold text-black transition hover:scale-105"
-  >
-    @genspark
-  </a>
-
-</div>
+          <a
+            href="https://t.me/genspark"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center rounded-full bg-cyan-400 px-8 py-3 font-semibold text-black transition hover:scale-105"
+          >
+            @genspark
+          </a>
+        </div>
       </section>
 
       <footer className="mt-20 border-t border-white/10 py-12">
@@ -970,14 +913,15 @@ export default function Page() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-          <a
-    href="https://t.me/genspark"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="rounded-full border border-white/10 px-5 py-3 text-white transition hover:bg-white/10"
->
-    Telegram
-</a>
+            <a
+              href="https://t.me/genspark"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border border-white/10 px-5 py-3 text-white transition hover:bg-white/10"
+            >
+              Telegram
+            </a>
+
             <a
               href="https://linkedin.com"
               target="_blank"
