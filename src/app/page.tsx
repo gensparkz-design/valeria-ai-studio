@@ -93,11 +93,6 @@ discuss: "Обсудить проект",
     aboutText:
       "Меня зовут Валерия. Я AI Product Manager и AI Solutions Builder. Я соединяю продуктовое мышление, опыт управления проектами и современные AI-инструменты, чтобы помогать бизнесу проверять идеи, запускать MVP и автоматизировать процессы.",
     pricingTitle: "Стоимость",
-    contactTitle: "Давайте создадим ваше AI-решение",
-    contactText:
-      "Расскажите о проекте, и я помогу определить самый быстрый и полезный вариант решения.",
-    send: "Отправить заявку",
-    discuss: "Обсудить проект",
     logoTagline: "AI-продуктовая студия",
     consoleLabel: "AI Agent Console",
     consoleTitle: "Valeria AI Assistant",
