@@ -579,7 +579,7 @@ export default function Page() {
               href="#contact"
               className="relative hidden items-center rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_8px_30px_rgba(124,58,237,0.35)] transition-all duration-300 hover:scale-105 hover:shadow-[0_10px_40px_rgba(34,211,238,0.55)] sm:inline-flex"
             >
-              {t.book}
+              {t.discuss}
             </a>
           </div>
         </div>
